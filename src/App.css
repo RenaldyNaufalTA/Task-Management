@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: #09090b;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #09090b; /* or whatever background color you prefer */
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
+
+.loader-container.fade-out {
+  opacity: 0;
+}
+
+.content {
+  transition: opacity 0.5s ease-in;
+  opacity: 0;
+}
+
+.content.visible {
+  opacity: 1;
+}
+
+.content.hidden {
+  opacity: 0;
+}
